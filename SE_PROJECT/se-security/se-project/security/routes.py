@@ -1,7 +1,8 @@
 from flask import Flask
-from se-security import app
-from se-security.forms import RegistrationForm, LoginForm
-from se-security.models import User, Post
+from security import app
+from security.forms import RegistrationForm, LoginForm
+from security.models import User, Post
+from flask import render_template, url_for, flash, redirect
 
 
 posts = [
