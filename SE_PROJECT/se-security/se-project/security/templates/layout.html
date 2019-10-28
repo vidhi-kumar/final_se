@@ -6,16 +6,44 @@
 <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script> -->
-        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">     
+<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
         <style>
         body{
-          
-          background: url("sec.jpg");
-          background-size: cover;
+          background: lightcyan;
+          /* background: url("sec.jpg");
+          background-size: cover; */
         }
+        .bg-dark {
+    background-color:darkblue !important;
+}
         *{
             margin: 0px;
             padding:0px;
+          }
+          /* input{
+            width: 50%;
+          } */
+          #email{
+            width: 50%;
+          }
+          #password{
+            width: 50%;
+          }
+          #username{
+            width: 50%;
+          }
+          #confirm_password{
+            width: 50%;
+          }
+          #hena{
+            margin-left: 350px;
+            margin-top: 150px;
+          }
+          #ady{
+            margin-left: 350px;
+            margin-top: 150px;
           }
         </style>
         {% if title %}
@@ -23,7 +51,7 @@
         {% else %}
         <title>Sequrity Force</title>
         {% endif %}
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
               <a class="navbar-brand mr-4" href="/">Arctic Warfare</a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -35,15 +63,15 @@
               <li class="nav-item active">
                 <a class="nav-link" href="{{ url_for('home') }}">Home<span class="sr-only">(current)</span></a>
               </li>
-              <li class="nav-item">
+              <li class="nav-item active">
                 <a class="nav-link" href="{{ url_for('about') }}">About</a>
               </li>
             </ul>
             <nav class="navbar-nav">
-                    <li class="nav-item">
+                    <li class="nav-item active">
                             <a class="nav-link " href="{{ url_for('login') }}">Login</a>
                           </li>
-                          <li class="nav-item">
+                          <li class="nav-item active">
                                 <a class="nav-link " href="{{ url_for('register') }}">Register</a>
                               </li>
                               </div>
